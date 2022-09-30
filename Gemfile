@@ -10,6 +10,7 @@ gem "jbuilder"
 gem "pg", "~> 1.1"
 gem "puma", "~> 5.0"
 gem "rails", "~> 7.0.4"
+gem 'validate_url', '~> 1.0', '>= 1.0.2'
 
 
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]

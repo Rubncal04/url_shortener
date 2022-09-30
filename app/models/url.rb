@@ -1,7 +1,8 @@
 class Url < ApplicationRecord
   has_many :visits
 
-  validates :original_url, presence: true
+  validates :original_url, presence: true, url: true
+
   after_validation :generate_short_url, on: :create
 
   private

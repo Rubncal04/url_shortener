@@ -3,5 +3,11 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  get ':url', to: 'urls#visit'
+  get ':url', to: 'urls#visit', as: :visit
+
+  namespace :api, defaults: { format: :json } do
+    namespace :v1 do
+      resources :urls, only: :create
+    end
+  end
 end
